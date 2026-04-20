@@ -26,6 +26,8 @@ function loadFromLocalStorage() {
   }
 }
 
+loadFromLocalStorage();
+
 form.addEventListener('input', event => {
   const { name, value } = event.target;
   if (name === 'email' || name === 'message') {
@@ -48,5 +50,3 @@ form.addEventListener('submit', event => {
   formData = { email: '', message: '' };
   form.reset();
 });
-
-loadFromLocalStorage();
